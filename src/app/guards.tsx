@@ -22,6 +22,6 @@ export function RequireProfile({ children }: { children: ReactNode }) {
 /** Solo para páginas de auth: si ya hay sesión, redirige al panel. */
 export function RedirectIfAuthed({ children }: { children: ReactNode }) {
   const userId = useStore((s) => s.currentUserId);
-  if (userId) return <Navigate to="/" replace />;
+  if (userId) return <Navigate to="/dashboard" replace />;
   return <>{children}</>;
 }

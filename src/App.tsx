@@ -3,6 +3,7 @@ import { AppLayout } from './app/AppLayout';
 import { RequireAuth, RequireProfile, RedirectIfAuthed } from './app/guards';
 import { Toaster } from './components/Toaster';
 
+import { LandingPage } from './features/landing/LandingPage';
 import { LoginPage } from './features/auth/LoginPage';
 import { RegisterPage } from './features/auth/RegisterPage';
 import { RecoverPage } from './features/auth/RecoverPage';
@@ -25,6 +26,9 @@ export default function App() {
   return (
     <>
       <Routes>
+        {/* Landing */}
+        <Route path="/landing" element={<LandingPage />} />
+
         {/* Auth */}
         <Route path="/login" element={<RedirectIfAuthed><LoginPage /></RedirectIfAuthed>} />
         <Route path="/register" element={<RedirectIfAuthed><RegisterPage /></RedirectIfAuthed>} />
@@ -41,7 +45,7 @@ export default function App() {
             </RequireProfile>
           }
         >
-          <Route path="/" element={<DashboardPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/diagnostic" element={<DiagnosticPage />} />
           <Route path="/diagnostic/results" element={<DiagnosticResultsPage />} />
           <Route path="/path" element={<PathPage />} />
@@ -56,7 +60,8 @@ export default function App() {
           <Route path="/profile" element={<ProfilePage />} />
         </Route>
 
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="/" element={<Navigate to="/landing" replace />} />
+        <Route path="*" element={<Navigate to="/landing" replace />} />
       </Routes>
       <Toaster />
     </>

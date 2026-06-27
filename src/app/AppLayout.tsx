@@ -22,7 +22,7 @@ import { useCurrentUser, useNotifications } from '@/store/selectors';
 import { cx, Pill } from '@/components/ui';
 
 const NAV = [
-  { to: '/', label: 'Panel principal', icon: LayoutDashboard, end: true },
+  { to: '/dashboard', label: 'Panel principal', icon: LayoutDashboard, end: true },
   { to: '/diagnostic', label: 'Diagnóstico', icon: Stethoscope },
   { to: '/path', label: 'Mi ruta', icon: RouteIcon },
   { to: '/activities', label: 'Actividades', icon: Dumbbell },

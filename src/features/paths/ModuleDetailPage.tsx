@@ -1,5 +1,6 @@
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { ArrowLeft, CheckCircle2, PlayCircle, Clock, Target, BookOpen, Dumbbell } from 'lucide-react';
+import { useShallow } from 'zustand/react/shallow';
 import { useStore } from '@/store/useStore';
 import { Button, Card, EmptyState, Pill, SectionTitle } from '@/components/ui';
 import { MODULE_BY_ID } from '@/data/modules';
@@ -15,13 +16,15 @@ export function ModuleDetailPage() {
   const setModuleStatus = useStore((s) => s.setModuleStatus);
   const pushNotification = useStore((s) => s.pushNotification);
 
-  const { path, pm } = useStore((s) => {
-    for (const p of s.paths.filter((x) => x.userId === s.currentUserId)) {
-      const found = p.modules.find((m) => m.id === pathModuleId);
-      if (found) return { path: p, pm: found };
-    }
-    return { path: null, pm: null };
-  });
+  const { path, pm } = useStore(
+    useShallow((s) => {
+      for (const p of s.paths.filter((x) => x.userId === s.currentUserId)) {
+        const found = p.modules.find((m) => m.id === pathModuleId);
+        if (found) return { path: p, pm: found };
+      }
+      return { path: null, pm: null };
+    }),
+  );
 
   if (!path || !pm) {
     return (

@@ -29,7 +29,7 @@ export function LoginPage() {
     // si tiene perfil va al panel, si no al onboarding
     const uid = useStore.getState().currentUserId;
     const hasProfile = profilesGetter.some((p) => p.userId === uid);
-    navigate(hasProfile ? '/' : '/onboarding');
+    navigate(hasProfile ? '/dashboard' : '/onboarding');
   }
 
   return (

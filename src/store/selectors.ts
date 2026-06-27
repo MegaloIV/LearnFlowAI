@@ -47,15 +47,17 @@ export function useGaps() {
 }
 
 export function useActivePath() {
-  return useStore((s) => {
-    const mine = s.paths.filter((p) => p.userId === s.currentUserId);
-    const active = mine.find((p) => p.status === 'active');
-    if (active) return active;
-    if (mine.length === 0) return null;
-    return mine.reduce((latest, p) =>
-      +new Date(p.createdAt) > +new Date(latest.createdAt) ? p : latest,
-    );
-  });
+  return useStore(
+    useShallow((s) => {
+      const mine = s.paths.filter((p) => p.userId === s.currentUserId);
+      const active = mine.find((p) => p.status === 'active');
+      if (active) return active;
+      if (mine.length === 0) return null;
+      return mine.reduce((latest, p) =>
+        +new Date(p.createdAt) > +new Date(latest.createdAt) ? p : latest,
+      );
+    }),
+  );
 }
 
 export function usePaths() {
