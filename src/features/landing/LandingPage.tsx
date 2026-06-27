@@ -5,7 +5,6 @@ import {
   Brain,
   BarChart3,
   Zap,
-  Users,
   Star,
   Check,
   Sparkles,
@@ -14,7 +13,6 @@ import {
   Clock,
   Target,
   Lightbulb,
-  ChevronRight,
 } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
