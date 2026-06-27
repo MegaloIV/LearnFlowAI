@@ -30,7 +30,7 @@ export function AuthShell({
           </p>
         </div>
         <p className="text-xs text-brand-200">
-          Prototipo de simulación · 100% frontend · sin backend real
+          Aprendizaje personalizado con inteligencia artificial
         </p>
       </div>
 

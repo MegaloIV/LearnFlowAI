@@ -171,7 +171,7 @@ export function DiagnosticPage() {
               <AlertTriangle className="mt-0.5 h-4 w-4 shrink-0" />
               <span>
                 Por buenas prácticas se recomienda esperar 7 días entre diagnósticos (han pasado{' '}
-                {Math.floor(daysSinceLast)}). Puedes repetirlo igualmente en este prototipo.
+                {Math.floor(daysSinceLast)}). Puedes repetirlo igualmente si lo deseas.
               </span>
             </div>
           )}

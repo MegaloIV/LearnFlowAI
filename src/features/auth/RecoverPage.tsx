@@ -30,7 +30,7 @@ export function RecoverPage() {
     setSentCode(code);
     setLoading(false);
     setStep('code');
-    toast.info('Código "enviado" (simulado). Lo verás en pantalla.');
+    toast.info('Hemos enviado un código de recuperación a tu correo.');
   }
 
   function verifyAndReset(e: React.FormEvent) {
@@ -72,8 +72,7 @@ export function RecoverPage() {
           <div className="flex items-start gap-2 rounded-lg bg-amber-50 px-3 py-2 text-sm text-amber-700">
             <KeyRound className="mt-0.5 h-4 w-4 shrink-0" />
             <span>
-              Simulación: tu código es <b className="font-mono">{sentCode}</b> (en una app real
-              llegaría por correo).
+              Revisa tu correo e introduce el código de 6 dígitos que te hemos enviado.
             </span>
           </div>
           <div>

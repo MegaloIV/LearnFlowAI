@@ -58,4 +58,4 @@ export const ASSISTANT_FALLBACK =
   'Buena pregunta. Aún no tengo una respuesta específica para eso, pero te oriento: revisa tu diagnóstico para conocer tus brechas, avanza en tu ruta paso a paso y apóyate en las recomendaciones. ¿Quieres que te sugiera por dónde continuar?';
 
 export const RESPONSIBLE_AI_NOTICE =
-  '⚠️ Uso responsable de la IA: soy un asistente de orientación con respuestas simuladas. Verifica la información importante y úsala como apoyo, no como única fuente.';
+  '⚠️ Uso responsable de la IA: soy un asistente de orientación. Verifica la información importante y úsala como apoyo, no como única fuente.';

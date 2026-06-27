@@ -89,7 +89,7 @@ function Brand() {
       </div>
       <div>
         <p className="text-sm font-extrabold leading-tight text-slate-900">LearnFlow</p>
-        <p className="text-[11px] font-semibold leading-tight text-brand-600">AI · Prototipo</p>
+        <p className="text-[11px] font-semibold leading-tight text-brand-600">AI</p>
       </div>
     </div>
   );

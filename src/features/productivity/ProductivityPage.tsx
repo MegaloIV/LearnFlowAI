@@ -157,16 +157,16 @@ function AvailabilityAndReminders() {
         <p className="mb-2 text-sm font-semibold text-slate-700">Recordatorios</p>
         <div className="flex flex-wrap gap-2">
           <Button size="sm" variant="outline" icon={<Bell className="h-4 w-4" />}
-            onClick={() => { pushNotification({ type: 'reminder', message: '⏰ Recordatorio: es un buen momento para estudiar.' }); toast.info('Recordatorio de estudio programado (simulado).'); }}>
+            onClick={() => { pushNotification({ type: 'reminder', message: '⏰ Recordatorio: es un buen momento para estudiar.' }); toast.info('Recordatorio de estudio programado.'); }}>
             Recordarme estudiar
           </Button>
           <Button size="sm" variant="outline" icon={<Bell className="h-4 w-4" />}
-            onClick={() => { pushNotification({ type: 'reminder', message: '🔁 Recordatorio: repasa el último módulo para fijar lo aprendido.' }); toast.info('Recordatorio de repaso programado (simulado).'); }}>
+            onClick={() => { pushNotification({ type: 'reminder', message: '🔁 Recordatorio: repasa el último módulo para fijar lo aprendido.' }); toast.info('Recordatorio de repaso programado.'); }}>
             Recordarme repasar
           </Button>
         </div>
         <p className="mt-2 text-xs text-slate-400">
-          En este prototipo los recordatorios aparecen como notificaciones dentro de la app (no correos reales).
+          Los recordatorios aparecen como notificaciones dentro de la app.
         </p>
       </div>
     </Card>

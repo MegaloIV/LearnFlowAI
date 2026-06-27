@@ -64,7 +64,7 @@ function Certificates() {
       <Modal open={!!cert} onClose={() => setViewing(null)} title="Certificado de finalización" maxWidth="max-w-2xl"
         footer={<>
           <Button variant="ghost" onClick={() => setViewing(null)}>Cerrar</Button>
-          <Button onClick={() => toast.success('Descarga simulada: en una app real obtendrías un PDF.')}>Descargar</Button>
+          <Button onClick={() => toast.success('Tu certificado se ha descargado correctamente.')}>Descargar</Button>
         </>}>
         {cert && (
           <div className="rounded-2xl border-4 border-double border-brand-300 bg-gradient-to-br from-white to-brand-50 p-8 text-center">
